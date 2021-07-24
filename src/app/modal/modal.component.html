@@ -1,0 +1,14 @@
+<!-- Modal -->
+
+<div class="modal">
+
+    <div class="modal-todo">
+        <span class="close-icon">
+            ×
+        </span>
+        <div *ngFor="let card of cards">
+            <img class="modal-img" [src]="card.img" />
+            <p class="card-text">{{card.content}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1200;
+}
+
+.modal-todo {
+    padding: 20px;
+    background-color: #FFF;
+    width: 65vw;
+    height: 85vh;
+    border-radius: 5px;
+}
+
+.close-icon {
+    display: block;
+    font-size: 40px;
+    text-align: right;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.modal-img {
+    width: 30%;
+    height: auto;
+}

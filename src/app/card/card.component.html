@@ -1,0 +1,10 @@
+<div class="cards">
+    <ul class="card" *ngFor="let card of cards; let i = index">
+        <li (click)="openModal(card)">
+            <img class="card-img" [src]="card.img" />
+            <p class="card-text">{{card.content}}</p>
+        </li>
+    </ul>
+</div>
+
+<app-modal [cards]="cards" (openModalEvent)="OpenModal()"></app-modal>
