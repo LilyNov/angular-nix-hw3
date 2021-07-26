@@ -1,14 +1,14 @@
 <!-- Modal -->
-
-<div class="modal">
+<button (click)="openModal(1)">OPEN</button>
+<div class="modal" *ngIf="showModal === 1">
 
     <div class="modal-todo">
-        <span class="close-icon">
+        <span class="close-icon" (click)="closeModal()">
             ×
         </span>
-        <div *ngFor="let card of cards">
-            <img class="modal-img" [src]="card.img" />
-            <p class="card-text">{{card.content}}</p>
+        <div>
+            <img class="modal-img" />
+            <p class="card-text">modal</p>
         </div>
     </div>
 </div>
