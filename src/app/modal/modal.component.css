@@ -1,4 +1,3 @@
-
 /* Modal */
 
 .modal {
@@ -19,11 +18,10 @@
     display: block;
 }
 
-.modal-todo {
+.modal-card {
     padding: 20px;
     background-color: #FFF;
-    width: 65vw;
-    height: 85vh;
+    width: 55vw;
     border-radius: 5px;
 }
 
@@ -31,11 +29,10 @@
     display: block;
     font-size: 40px;
     text-align: right;
-    margin-bottom: 20px;
     cursor: pointer;
 }
 
 .modal-img {
-    width: 30%;
+    width: 50%;
     height: auto;
 }

@@ -9,16 +9,14 @@ import { Card } from '../models/Card'
 })
 export class CardItemComponent implements OnInit {
   showModal = -1
+  @Input() cardItem!: Card
+  @Output() onDeleteItem: EventEmitter<Card> = new EventEmitter<Card>()
 
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.cardItem);
 
   }
-
-  @Input() cardItem!: Card
-  @Output() onDeleteItem: EventEmitter<Card> = new EventEmitter<Card>()
 
   public deleteItem(): void {
     this.onDeleteItem.emit(this.cardItem)
@@ -29,6 +27,7 @@ export class CardItemComponent implements OnInit {
     console.log('modal');
     this.showModal = index
   }
+
   closeModal() {
     this.showModal = -1
   }

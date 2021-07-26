@@ -1,14 +1,14 @@
 <!-- Modal -->
-<button (click)="openModal(1)">OPEN</button>
-<div class="modal" *ngIf="showModal === 1">
+<!-- <div class="modal" *ngIf="showModal === 1">
 
-    <div class="modal-todo">
+    <div class="modal-card">
         <span class="close-icon" (click)="closeModal()">
             ×
         </span>
         <div>
-            <img class="modal-img" />
-            <p class="card-text">modal</p>
+            <img class="modal-img" [src]="cardItem.img" />
+            <p class="modal-text">{{cardItem.content}}</p>
+            <button class="delete" (click)="deleteItem()">Remove</button>
         </div>
     </div>
-</div>
+</div> -->
