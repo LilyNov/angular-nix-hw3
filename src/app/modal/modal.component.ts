@@ -9,20 +9,25 @@ import { Card } from '../models/Card'
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-  @Input() cardItem!: Card
-
+  @Input() card!: Card
   constructor() { }
 
   ngOnInit() {
+    console.log(this.card);
 
   }
 
   showModal = -1
 
-  openModal(index: number) {
-    this.showModal = index
-  }
   closeModal() {
+    console.log('click close');
+
     this.showModal = -1
   }
+
+  openM(card: Card): void {
+    const cardId = card.id;
+    console.log(card);
+  }
+
 }

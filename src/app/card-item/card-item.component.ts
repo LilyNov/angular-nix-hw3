@@ -22,13 +22,11 @@ export class CardItemComponent implements OnInit {
     this.onDeleteItem.emit(this.cardItem)
   }
 
-
-  openModal(index: number) {
-    console.log('modal');
+  openModal(index: number): void {
     this.showModal = index
   }
 
-  closeModal() {
+  closeModal(): void {
     this.showModal = -1
   }
 
