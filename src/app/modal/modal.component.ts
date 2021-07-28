@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Card } from '../models/Card'
 
 
@@ -9,25 +10,17 @@ import { Card } from '../models/Card'
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-  @Input() card!: Card
-  constructor() { }
+  card!: Card
+  deleteCard!: EventEmitter<Card>
+
+constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {
-    console.log(this.card);
 
   }
-
-  showModal = -1
-
-  closeModal() {
-    console.log('click close');
-
-    this.showModal = -1
-  }
-
-  openM(card: Card): void {
-    const cardId = card.id;
-    console.log(card);
+  onDeleteCard(): void {
+    this.deleteCard.emit(this.card);
+    this.activeModal.close();
   }
 
 }

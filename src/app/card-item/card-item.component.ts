@@ -1,5 +1,7 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Card } from '../models/Card'
+import { ModalComponent } from '../modal/modal.component'
 
 
 @Component({
@@ -8,26 +10,21 @@ import { Card } from '../models/Card'
   styleUrls: ['./card-item.component.css']
 })
 export class CardItemComponent implements OnInit {
-  showModal = -1
-  @Input() cardItem!: Card
-  @Output() onDeleteItem: EventEmitter<Card> = new EventEmitter<Card>()
 
-  constructor() { }
+  @Input() cardItem!: Card
+  @Output() deleteCard: EventEmitter<Card> = new EventEmitter<Card>()
+
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {
 
   }
 
-  public deleteItem(): void {
-    this.onDeleteItem.emit(this.cardItem)
+  openModal() {
+    const active = this.modalService.open(ModalComponent, {
+      ariaLabelledBy: 'modal-basic-title',
+    });
+    active.componentInstance.card = this.cardItem;
+    active.componentInstance.deleteCard = this.deleteCard;
   }
-
-  openModal(index: number): void {
-    this.showModal = index
-  }
-
-  closeModal(): void {
-    this.showModal = -1
-  }
-
 }

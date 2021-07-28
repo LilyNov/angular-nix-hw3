@@ -1,38 +1,4 @@
-/* Modal */
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1200;
-}
-
-.modal.show {
-    display: block;
-}
-
-.modal-card {
-    padding: 20px;
-    background-color: #FFF;
-    width: 55vw;
-    border-radius: 5px;
-}
-
-.close-icon {
-    display: block;
-    font-size: 40px;
-    text-align: right;
-    cursor: pointer;
-}
-
 .modal-img {
-    width: 50%;
-    height: auto;
+  width: 50%;
+  height: auto;
 }

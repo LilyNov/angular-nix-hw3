@@ -57,9 +57,8 @@ export class CardComponent implements OnInit {
 
   }
 
-  deleteItem(card: Card): void {
+  public onCardDelete(card: Card): void {
     const cardId = card.id;
-    console.log(card);
     const newCards: Card[] = this.cards.filter((cardItem: Card) => cardItem.id !== cardId)
     this.cards = [...newCards]
   }

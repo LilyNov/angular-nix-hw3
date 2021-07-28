@@ -1,21 +1,5 @@
-<li class="card" (click)="openModal(1)">
+<li class="card" (click)="openModal()">
     <img class="card-img" [src]="cardItem.img" />
     <p class="card-text">{{cardItem.content}}</p>
 </li>
 
-<!-- Modal -->
-<!-- <app-modal [card]="cardItem" *ngIf="showModal === 1"></app-modal> -->
-
-<div class="modal" *ngIf="showModal === 1">
-
-    <div class="modal-card">
-        <span class="close-icon" (click)="closeModal()">
-            ×
-        </span>
-        <div>
-            <img class="modal-img" [src]="cardItem.img" />
-            <p class="modal-text">{{cardItem.content}}</p>
-            <button class="delete" (click)="deleteItem()">Remove</button>
-        </div>
-    </div>
-</div>

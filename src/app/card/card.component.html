@@ -1,6 +1,4 @@
 <ul class="cards">
-    <app-card-item *ngFor="let card of cards" [cardItem]="card" (onDeleteItem)="deleteItem($event)"></app-card-item>
+    <app-card-item *ngFor="let card of cards" [cardItem]="card" (deleteCard)="onCardDelete($event)"></app-card-item>
 </ul>
 
-
-<!-- <app-modal></app-modal> -->
